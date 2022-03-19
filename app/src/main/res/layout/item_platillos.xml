@@ -32,23 +32,20 @@
             android:fontFamily="sans-serif-condensed"
             android:textSize="20dp"
             android:gravity="center"
-
-
-            android:text="TextView" />
+            android:text="Nombre del platillo" />
 
         <TextView
             android:id="@+id/precio_platillo"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_weight="30"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed"
             android:textSize="20dp"
             android:gravity="center|right"
-
-
-            android:text="TextView" />
+            android:text="2.35$" />
 
     </LinearLayout>
 
