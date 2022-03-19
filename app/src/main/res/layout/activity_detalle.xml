@@ -32,6 +32,7 @@
         android:orientation="vertical">
 
         <ListView
+            android:id="@+id/liview_platillos"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -54,56 +55,25 @@
             android:textColor="@color/white"
             android:textSize="25dp" />
 
-        <TableRow
-            android:layout_width="225dp"
-            android:layout_height="71dp"
-            android:layout_marginHorizontal="85dp"
-            android:layout_marginTop="40dp"
-            android:layout_weight="100"
-            android:background="@drawable/rectangulo_inicio">
+        <EditText
+            android:id="@+id/editTextCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
 
-            <Button
-                android:id="@+id/btn_disminuir"
-                android:layout_width="67dp"
-                android:layout_height="68dp"
-                android:layout_marginHorizontal="7dp"
-                android:layout_marginTop="3dp"
-                android:text="-"
-                android:textSize="30dp" />
-
-            <EditText
-                android:id="@+id/txtCatidad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:inputType="number"
-                android:text="1"
-                android:textColor="@color/white"
-                android:textSize="40dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_aumentar"
-                android:layout_width="67dp"
-                android:layout_height="68dp"
-                android:layout_marginHorizontal="7dp"
-                android:layout_marginTop="3dp"
-                android:text="+"
-                android:textSize="30dp" />
-        </TableRow>
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="530dp"
         android:gravity="center"
         android:layout_marginHorizontal="15dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/titleTotal"
+            android:id="@+id/titleTotalPlatillos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total: "
@@ -112,15 +82,15 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/txt_total"
+            android:id="@+id/tv_totalPlatillos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="2.40$"
             android:textColor="@color/white"
-            android:textSize="20dp"/>
+            android:textSize="25dp"/>
 
         <Button
-            android:id="@+id/btnAceptar"
+            android:id="@+id/btnAceptarPlatillos"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
 

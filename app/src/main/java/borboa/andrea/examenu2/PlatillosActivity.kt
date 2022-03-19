@@ -13,7 +13,7 @@ import android.widget.TextView
 
 class PlatillosActivity : AppCompatActivity() {
 
-    var comidas = ArrayList<Platillo>()
+    var comidas = ArrayList<platillo>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,21 +27,21 @@ class PlatillosActivity : AppCompatActivity() {
     }
 
     fun agregaPlatillos(){
-        comidas.add(Platillo(R.drawable.imgtacos,"TACOS",2.35f))
-        comidas.add(Platillo(R.drawable.img_antojitos,"ANTOJITOS",0.00f))
-        comidas.add(Platillo(R.drawable.img_especialidades,"ESPECIALIDADES",0.00f))
-        comidas.add(Platillo(R.drawable.img_caldos,"CALDOS",0.00f))
-        comidas.add(Platillo(R.drawable.img_combinations,"COMBINATIONS",0.00f))
-        comidas.add(Platillo(R.drawable.img_tortas,"TORTAS",0.00f))
-        comidas.add(Platillo(R.drawable.img_sopas,"SOPAS",0.00f))
-        comidas.add(Platillo(R.drawable.img_side,"SIDE ORDERS",0.00f))
+        comidas.add(platillo(R.drawable.imgtacos,"TACOS",2.35))
+        comidas.add(platillo(R.drawable.img_antojitos,"ANTOJITOS",0.0))
+        comidas.add(platillo(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
+        comidas.add(platillo(R.drawable.img_caldos,"CALDOS",0.0))
+        comidas.add(platillo(R.drawable.img_combinations,"COMBINATIONS",0.0))
+        comidas.add(platillo(R.drawable.img_tortas,"TORTAS",0.0))
+        comidas.add(platillo(R.drawable.img_sopas,"SOPAS",0.0))
+        comidas.add(platillo(R.drawable.img_side,"SIDE ORDERS",0.0))
     }
 
     private class AdaptadorPlatillos: BaseAdapter {
-        var platillos = ArrayList<Platillo>()
+        var platillos = ArrayList<platillo>()
         var contexto: Context? = null
 
-        constructor(contexto: Context,platillos: ArrayList<Platillo>){
+        constructor(contexto: Context,platillos: ArrayList<platillo>){
             this.platillos= platillos
             this.contexto= contexto
         }
