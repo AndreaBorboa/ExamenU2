@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_weight="100"
+        android:layout_marginTop="10dp"
         android:layout_marginHorizontal="15dp"
         android:orientation="horizontal"
         android:background="@drawable/rectangulo_inicio">

@@ -9,16 +9,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val boton_platillos: Button = findViewById(R.id.btn_platilos)
-        val boton_drinks: Button = findViewById(R.id.btn_drinks)
+        val boton_menu: Button = findViewById(R.id.btn_menu)
 
-        boton_platillos.setOnClickListener{
+        boton_menu.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
-            startActivity(intent)
-        }
-
-        boton_drinks.setOnClickListener {
-            var intent: Intent = Intent (this, DrinksActivity::class.java)
             startActivity(intent)
         }
 

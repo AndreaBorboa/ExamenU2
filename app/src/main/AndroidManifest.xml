@@ -19,7 +19,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlatillosActivity"></activity>
-        <activity android:name=".DrinksActivity"></activity>
+        <activity android:name=".AntojitosActivity"></activity>
+        <activity android:name=".CaldosActivity"></activity>
+        <activity android:name=".CombinationsActivity"></activity>
+        <activity android:name=".EspecialidadesActivity"></activity>
+        <activity android:name=".SideOrdersActivity"></activity>
+        <activity android:name=".SopasActivity"></activity>
+        <activity android:name=".TacosActivity"></activity>
+        <activity android:name=".TortasActivity"></activity>
+        <activity android:name=".BebidasActivity"></activity>
+
+
     </application>
 
 </manifest>

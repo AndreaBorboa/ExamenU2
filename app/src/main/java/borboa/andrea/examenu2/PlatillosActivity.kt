@@ -1,19 +1,22 @@
 package borboa.andrea.examenu2
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class PlatillosActivity : AppCompatActivity() {
 
-    var comidas = ArrayList<comidas>()
+    var comidas = ArrayList<item>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,25 +28,68 @@ class PlatillosActivity : AppCompatActivity() {
         var adaptador: AdaptadorPlatillos= AdaptadorPlatillos(this, comidas)
         listview.adapter = adaptador
 
+        listview.setOnItemClickListener(
+            OnItemClickListener { parent, view, position, id ->
+                if (position == 0) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, TacosActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 1) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, AntojitosActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 2) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, EspecialidadesActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 3) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, CaldosActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 4) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, CombinationsActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 5) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, TortasActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 6) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, SopasActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 7) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, SideOrdersActivity::class.java)
+                    startActivity(myIntent)
+                } else if (position == 8) {
+                    // Abre una nueva Activity:
+                    val myIntent = Intent(view.context, BebidasActivity::class.java)
+                    startActivity(myIntent)
+                }
+
+            }
+        )
+
     }
 
     fun agregaPlatillos(){
-        comidas.add(comidas(R.drawable.imgtacos,"TACOS",2.35))
-        comidas.add(comidas(R.drawable.img_antojitos,"ANTOJITOS",0.0))
-        comidas.add(comidas(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
-        comidas.add(comidas(R.drawable.img_caldos,"CALDOS",0.0))
-        comidas.add(comidas(R.drawable.img_combinations,"COMBINATIONS",0.0))
-        comidas.add(comidas(R.drawable.img_tortas,"TORTAS",0.0))
-        comidas.add(comidas(R.drawable.img_sopas,"SOPAS",0.0))
-        comidas.add(comidas(R.drawable.img_side,"SIDE ORDERS",0.0))
-        comidas.add(comidas(R.drawable.cubetazos,"DRINKS",0.0))
+        comidas.add(item(R.drawable.imgtacos,"TACOS",2.35))
+        comidas.add(item(R.drawable.img_antojitos,"ANTOJITOS",0.0))
+        comidas.add(item(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
+        comidas.add(item(R.drawable.img_caldos,"CALDOS",0.0))
+        comidas.add(item(R.drawable.img_combinations,"COMBINATIONS",0.0))
+        comidas.add(item(R.drawable.img_tortas,"TORTAS",0.0))
+        comidas.add(item(R.drawable.img_sopas,"SOPAS",0.0))
+        comidas.add(item(R.drawable.img_side,"SIDE ORDERS",0.0))
+        comidas.add(item(R.drawable.cubetazos,"DRINKS",0.0))
     }
 
     private class AdaptadorPlatillos: BaseAdapter {
-        var platillos = ArrayList<comidas>()
+        var platillos = ArrayList<item>()
         var contexto: Context? = null
 
-        constructor(contexto: Context,platillos: ArrayList<comidas>){
+        constructor(contexto: Context,platillos: ArrayList<item>){
             this.platillos= platillos
             this.contexto= contexto
         }
@@ -69,9 +115,9 @@ class PlatillosActivity : AppCompatActivity() {
             var nombre = vista.findViewById(R.id.nombre_platillo) as TextView
             var precio = vista.findViewById(R.id.precio_platillo) as TextView
 
-            imagen.setImageResource(comida.image_platillo)
-            nombre.setText(comida.nombre_platillo)
-            precio.setText("$${comida.precio_platillo}")
+            imagen.setImageResource(comida.image_item)
+            nombre.setText(comida.nombre_item)
+            precio.setText("$${comida.precio_item}")
 
             return vista
         }
