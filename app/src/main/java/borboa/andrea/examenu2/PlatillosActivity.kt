@@ -13,7 +13,7 @@ import android.widget.TextView
 
 class PlatillosActivity : AppCompatActivity() {
 
-    var comidas = ArrayList<platillo>()
+    var comidas = ArrayList<comidas>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,24 +24,25 @@ class PlatillosActivity : AppCompatActivity() {
         var listview: ListView = findViewById(R.id.liview) as ListView
         var adaptador: AdaptadorPlatillos= AdaptadorPlatillos(this, comidas)
         listview.adapter = adaptador
+
     }
 
     fun agregaPlatillos(){
-        comidas.add(platillo(R.drawable.imgtacos,"TACOS",2.35))
-        comidas.add(platillo(R.drawable.img_antojitos,"ANTOJITOS",0.0))
-        comidas.add(platillo(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
-        comidas.add(platillo(R.drawable.img_caldos,"CALDOS",0.0))
-        comidas.add(platillo(R.drawable.img_combinations,"COMBINATIONS",0.0))
-        comidas.add(platillo(R.drawable.img_tortas,"TORTAS",0.0))
-        comidas.add(platillo(R.drawable.img_sopas,"SOPAS",0.0))
-        comidas.add(platillo(R.drawable.img_side,"SIDE ORDERS",0.0))
+        comidas.add(comidas(R.drawable.imgtacos,"TACOS",2.35))
+        comidas.add(comidas(R.drawable.img_antojitos,"ANTOJITOS",0.0))
+        comidas.add(comidas(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
+        comidas.add(comidas(R.drawable.img_caldos,"CALDOS",0.0))
+        comidas.add(comidas(R.drawable.img_combinations,"COMBINATIONS",0.0))
+        comidas.add(comidas(R.drawable.img_tortas,"TORTAS",0.0))
+        comidas.add(comidas(R.drawable.img_sopas,"SOPAS",0.0))
+        comidas.add(comidas(R.drawable.img_side,"SIDE ORDERS",0.0))
     }
 
     private class AdaptadorPlatillos: BaseAdapter {
-        var platillos = ArrayList<platillo>()
+        var platillos = ArrayList<comidas>()
         var contexto: Context? = null
 
-        constructor(contexto: Context,platillos: ArrayList<platillo>){
+        constructor(contexto: Context,platillos: ArrayList<comidas>){
             this.platillos= platillos
             this.contexto= contexto
         }

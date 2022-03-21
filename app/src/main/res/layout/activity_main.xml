@@ -30,17 +30,28 @@
         android:visibility="visible">
 
         <Button
-            android:id="@+id/btn_menu"
+            android:id="@+id/btn_platilos"
             android:layout_width="237dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginTop="120dp"
             android:background="@color/yellow"
             android:fontFamily="sans-serif-condensed"
-            android:text="Menu"
+            android:text="PLATILLOS"
             android:textColor="@color/white"
-            android:textSize="35sp"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/btn_drinks"
+            android:layout_width="237dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:background="@color/yellow"
+            android:fontFamily="sans-serif-light"
+            android:text="DRINKS"
+            android:textColor="@color/white"
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
