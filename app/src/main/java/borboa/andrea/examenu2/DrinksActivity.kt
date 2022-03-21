@@ -14,6 +14,7 @@ import android.widget.TextView
 class DrinksActivity : AppCompatActivity() {
 
     var drinks = ArrayList<drink>()
+    var adapter: AdaptadorDrinks? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,7 @@ class DrinksActivity : AppCompatActivity() {
         drinks.add(drink(R.drawable.cubetazos,"CUBETAZOS",19.99))
     }
 
-    private class AdaptadorDrinks: BaseAdapter {
+    class AdaptadorDrinks: BaseAdapter {
         var drinks = ArrayList<drink>()
         var contexto: Context? = null
 

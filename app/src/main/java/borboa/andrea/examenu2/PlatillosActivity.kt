@@ -36,6 +36,7 @@ class PlatillosActivity : AppCompatActivity() {
         comidas.add(comidas(R.drawable.img_tortas,"TORTAS",0.0))
         comidas.add(comidas(R.drawable.img_sopas,"SOPAS",0.0))
         comidas.add(comidas(R.drawable.img_side,"SIDE ORDERS",0.0))
+        comidas.add(comidas(R.drawable.cubetazos,"DRINKS",0.0))
     }
 
     private class AdaptadorPlatillos: BaseAdapter {
