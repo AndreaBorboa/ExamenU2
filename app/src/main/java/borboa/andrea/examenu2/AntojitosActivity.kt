@@ -69,11 +69,16 @@ class AntojitosActivity : AppCompatActivity() {
             nombre.setText(antojitos.nombre_item)
             precio.setText("$${antojitos.precio_item}")
 
+
+
             imagen.setOnClickListener{
+
                 var intent = Intent(contexto, detalle_platillos::class.java)
+
                 intent.putExtra("image_item",antojitos.image_item)
                 intent.putExtra("nombre_item",antojitos.nombre_item)
                 intent.putExtra("precio_item",antojitos.precio_item)
+
                 contexto!!.startActivity(intent)
             }
             return vista

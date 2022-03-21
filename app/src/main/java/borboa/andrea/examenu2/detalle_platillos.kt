@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import org.w3c.dom.Text
 
 class detalle_platillos : AppCompatActivity() {
     val iv_imagen_item: ImageView = findViewById(R.id.imagen_selected)

@@ -28,8 +28,8 @@
         <activity android:name=".TacosActivity"></activity>
         <activity android:name=".TortasActivity"></activity>
         <activity android:name=".BebidasActivity"></activity>
-
-
+        <activity android:name=".SeleccionActivity"></activity>
+        <activity android:name=".detalle_platillos"></activity>
     </application>
 
 </manifest>
