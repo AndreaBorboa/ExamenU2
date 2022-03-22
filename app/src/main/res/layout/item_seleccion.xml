@@ -54,15 +54,20 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
-
-        <Button
-            android:id="@+id/btn_carrito"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/yellow"
-            android:text="AGREGAR AL CARRITO"/>
+            android:text="Total: "
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
 
-
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
 
     </LinearLayout>
 

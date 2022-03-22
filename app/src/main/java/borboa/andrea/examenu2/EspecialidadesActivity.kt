@@ -29,12 +29,12 @@ class EspecialidadesActivity : AppCompatActivity() {
     }
 
     fun agregaEspecialidades() {
-        especialidades.add(item(R.drawable.imgtacos, "Mojarra Frita / Fried Fish", 14.99))
-        especialidades.add(item(R.drawable.imgtacos, "Tostadas de ceviche", 2.99))
-        especialidades.add(item(R.drawable.imgtacos, "Fajita Burrito", 11.79))
-        especialidades.add(item(R.drawable.imgtacos, "Fajita Quesadilla", 12.49))
-        especialidades.add(item(R.drawable.imgtacos, "Botana de Camarones", 17.99))
-        especialidades.add(item(R.drawable.imgtacos, "Coctel de Camaron", 14.50))
+        especialidades.add(item(R.drawable.img_especialidades, "Mojarra Frita / Fried Fish", 14.99))
+        especialidades.add(item(R.drawable.img_tostadas, "Tostadas de ceviche", 2.99))
+        especialidades.add(item(R.drawable.img_especialidades, "Fajita Burrito", 11.79))
+        especialidades.add(item(R.drawable.img_fajitaquesadilla, "Fajita Quesadilla", 12.49))
+        especialidades.add(item(R.drawable.img_especialidades, "Botana de Camarones", 17.99))
+        especialidades.add(item(R.drawable.img_especialidades, "Coctel de Camaron", 14.50))
     }
 
     class AdaptadorEspecialidades : BaseAdapter {

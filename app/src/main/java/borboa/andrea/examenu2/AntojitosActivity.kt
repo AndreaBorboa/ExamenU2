@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.*
 
 class AntojitosActivity : AppCompatActivity() {
@@ -16,12 +17,14 @@ class AntojitosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_detalle)
 
         agregaAntojitos()
 
         var listview: ListView = findViewById(R.id.liview_platillos) as ListView
         var adaptador: AdaptadorAntojitos = AdaptadorAntojitos(this, antojitos)
+
         listview.adapter = adaptador
 
     }
@@ -56,9 +59,9 @@ class AntojitosActivity : AppCompatActivity() {
             return p0.toLong()
         }
 
-        override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-            var antojitos = antojitos[p0]
-            var inflador = LayoutInflater.from(contexto)
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            var antojitos = antojitos[position]
+            var inflador = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             var vista = inflador.inflate(R.layout.item_platillos, null)
 
             var imagen = vista.findViewById(R.id.img_platillo) as ImageView
@@ -69,15 +72,11 @@ class AntojitosActivity : AppCompatActivity() {
             nombre.setText(antojitos.nombre_item)
             precio.setText("$${antojitos.precio_item}")
 
-
-
             imagen.setOnClickListener{
-
-                var intent = Intent(contexto, detalle_platillos::class.java)
-
-                intent.putExtra("image_item",antojitos.image_item)
-                intent.putExtra("nombre_item",antojitos.nombre_item)
-                intent.putExtra("precio_item",antojitos.precio_item)
+                val intent:Intent = Intent(contexto, detalle_platillos::class.java)
+                intent.putExtra("nombre",antojitos.nombre_item)
+                intent.putExtra("imagen",antojitos.image_item)
+                intent.putExtra("precio",antojitos.precio_item)
 
                 contexto!!.startActivity(intent)
             }
@@ -85,3 +84,4 @@ class AntojitosActivity : AppCompatActivity() {
         }
     }
 }
+
