@@ -74,15 +74,15 @@ class PlatillosActivity : AppCompatActivity() {
     }
 
     fun agregaPlatillos(){
-        comidas.add(item(R.drawable.imgtacos,"TACOS",2.35))
-        comidas.add(item(R.drawable.img_antojitos,"ANTOJITOS",0.0))
+        comidas.add(item(R.drawable.tacos,"TACOS",2.35))
+        comidas.add(item(R.drawable.huarache,"ANTOJITOS",0.0))
         comidas.add(item(R.drawable.img_especialidades,"ESPECIALIDADES",0.0))
-        comidas.add(item(R.drawable.img_caldos,"CALDOS",0.0))
-        comidas.add(item(R.drawable.img_combinations,"COMBINATIONS",0.0))
-        comidas.add(item(R.drawable.img_tortas,"TORTAS",0.0))
-        comidas.add(item(R.drawable.img_sopas,"SOPAS",0.0))
-        comidas.add(item(R.drawable.img_side,"SIDE ORDERS",0.0))
-        comidas.add(item(R.drawable.cubetazos,"DRINKS",0.0))
+        comidas.add(item(R.drawable.caldores,"CALDOS",0.0))
+        comidas.add(item(R.drawable.combinations,"COMBINATIONS",0.0))
+        comidas.add(item(R.drawable.torta,"TORTAS",0.0))
+        comidas.add(item(R.drawable.pozole,"SOPAS",0.0))
+        comidas.add(item(R.drawable.sideorders,"SIDE ORDERS",0.0))
+        comidas.add(item(R.drawable.bebidas,"DRINKS",0.0))
     }
 
     private class AdaptadorPlatillos: BaseAdapter {

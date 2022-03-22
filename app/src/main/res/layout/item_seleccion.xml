@@ -22,7 +22,7 @@
             android:id="@+id/imagen_selected"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/michelada" />
+            app:srcCompat="@drawable/bebidas" />
 
         <TextView
             android:id="@+id/item_selected"

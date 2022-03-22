@@ -29,8 +29,8 @@ class CaldosActivity : AppCompatActivity() {
     }
 
     fun agregaCaldos() {
-        caldos.add(item(R.drawable.img_caldos, "Langer", 10.99))
-        caldos.add(item(R.drawable.img_caldos, "Camaron", 11.99))
+        caldos.add(item(R.drawable.caldomarisco, "Langer", 10.99))
+        caldos.add(item(R.drawable.caldocamaron, "Camaron", 11.99))
     }
 
     class AdaptadorCaldos : BaseAdapter {

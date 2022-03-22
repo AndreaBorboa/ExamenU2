@@ -26,8 +26,6 @@ class detalle_platillos : AppCompatActivity() {
             tv_precio_item.setText(bundle.getString("precio_item"))
         }
 
-        val item_cantidad: TextView = findViewById(R.id.et_cantidad)
-
         var cantidad = Integer.parseInt(et_cantidad.text.toString())
         var precio = Integer.parseInt(tv_precio_item.text.toString())
 

@@ -30,11 +30,11 @@ class TortasActivity : AppCompatActivity() {
     }
 
     fun agregaTortas() {
-        tortas.add(item(R.drawable.imgtacos, "Torta Regular", 10.95))
-        tortas.add(item(R.drawable.imgtacos, "Torta Milanesa de Res o Pollo", 11.99))
-        tortas.add(item(R.drawable.imgtacos, "Torta Cubana", 12.35))
-        tortas.add(item(R.drawable.imgtacos, "Torta Mixta", 11.99))
-        tortas.add(item(R.drawable.imgtacos, "Small Mexican Torta", 6.89))
+        tortas.add(item(R.drawable.torta, "Torta Regular", 10.95))
+        tortas.add(item(R.drawable.torta, "Torta Milanesa de Res o Pollo", 11.99))
+        tortas.add(item(R.drawable.tortacubana, "Torta Cubana", 12.35))
+        tortas.add(item(R.drawable.torta, "Torta Mixta", 11.99))
+        tortas.add(item(R.drawable.torta, "Small Mexican Torta", 6.89))
     }
 
     class AdaptadorTortas : BaseAdapter {

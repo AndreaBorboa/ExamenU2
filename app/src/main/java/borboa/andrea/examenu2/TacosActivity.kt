@@ -29,20 +29,20 @@ class TacosActivity : AppCompatActivity() {
     }
 
     fun agregaTacos(){
-        tacos.add(item(R.drawable.imgtacos,"Asada/Beef Steak",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Pollo/Chicken",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Carnitas/Pulled Pork",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Chorizo/Mexican Sausage",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Suadero/Shredded Beef",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Biche/Pork Stomach",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Al pastor/Marinated Pork",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Cachete/Beef Cheek",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Barbacoa/BBQ",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Tripa/Beef Intestine",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Chicharron/Pork Rinds",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Cueritos/Pork Skin",2.35))
-        tacos.add(item(R.drawable.imgtacos,"Lengua",3.99))
-        tacos.add(item(R.drawable.imgtacos,"Taco de Pescado",2.35))
+        tacos.add(item(R.drawable.tacos,"Asada/Beef Steak",2.35))
+        tacos.add(item(R.drawable.tacos,"Pollo/Chicken",2.35))
+        tacos.add(item(R.drawable.tacos,"Carnitas/Pulled Pork",2.35))
+        tacos.add(item(R.drawable.tacos,"Chorizo/Mexican Sausage",2.35))
+        tacos.add(item(R.drawable.tacos,"Suadero/Shredded Beef",2.35))
+        tacos.add(item(R.drawable.tacos,"Biche/Pork Stomach",2.35))
+        tacos.add(item(R.drawable.tacos,"Al pastor/Marinated Pork",2.35))
+        tacos.add(item(R.drawable.tacos,"Cachete/Beef Cheek",2.35))
+        tacos.add(item(R.drawable.tacos,"Barbacoa/BBQ",2.35))
+        tacos.add(item(R.drawable.tacos,"Tripa/Beef Intestine",2.35))
+        tacos.add(item(R.drawable.tacos,"Chicharron/Pork Rinds",2.35))
+        tacos.add(item(R.drawable.tacos,"Cueritos/Pork Skin",2.35))
+        tacos.add(item(R.drawable.tacos,"Lengua",3.99))
+        tacos.add(item(R.drawable.tacos,"Taco de Pescado",2.35))
 
     }
 

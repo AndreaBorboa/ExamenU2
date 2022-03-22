@@ -30,21 +30,21 @@ class BebidasActivity : AppCompatActivity() {
     }
 
     fun agregaBebidas() {
-        bebidas.add(item(R.drawable.sodas, "Sodas", 2.75))
-        bebidas.add(item(R.drawable.jarrito, "Jarritos", 2.35))
-        bebidas.add(item(R.drawable.aguafresca, "Aguas Frescas", 2.75))
-        bebidas.add(item(R.drawable.domesticbeer, "Domestic Beer", 3.55))
-        bebidas.add(item(R.drawable.mexicanbeer, "Mexican Beer", 3.99))
-        bebidas.add(item(R.drawable.michelada, "Micheladas", 6.75))
-        bebidas.add(item(R.drawable.cahuamamichelada, "Caguama", 7.99))
-        bebidas.add(item(R.drawable.cahuamamichelada, "Caguama Michelada", 10.99))
-        bebidas.add(item(R.drawable.cubetazos, "Cubetazos", 19.99))
-        bebidas.add(item(R.drawable.cubetazos, "Lata Beer", 2.99))
-        bebidas.add(item(R.drawable.cubetazos, "Charolazo", 15.75))
-        bebidas.add(item(R.drawable.cubetazos, "Charolazo con camarones", 21.99))
-        bebidas.add(item(R.drawable.cubetazos, "La mamalona", 12.99))
-        bebidas.add(item(R.drawable.cubetazos, "La mamalona con camarones", 14.99))
-        bebidas.add(item(R.drawable.cubetazos, "Cubetazo (6 cervezas)", 21.99))
+        bebidas.add(item(R.drawable.bebidas, "Sodas", 2.75))
+        bebidas.add(item(R.drawable.bebidas, "Jarritos", 2.35))
+        bebidas.add(item(R.drawable.bebidas, "Aguas Frescas", 2.75))
+        bebidas.add(item(R.drawable.bebidas, "Domestic Beer", 3.55))
+        bebidas.add(item(R.drawable.bebidas, "Mexican Beer", 3.99))
+        bebidas.add(item(R.drawable.micheladas, "Micheladas", 6.75))
+        bebidas.add(item(R.drawable.bebidas, "Caguama", 7.99))
+        bebidas.add(item(R.drawable.bebidas, "Caguama Michelada", 10.99))
+        bebidas.add(item(R.drawable.bebidas, "Cubetazos", 19.99))
+        bebidas.add(item(R.drawable.bebidas, "Lata Beer", 2.99))
+        bebidas.add(item(R.drawable.bebidas, "Charolazo", 15.75))
+        bebidas.add(item(R.drawable.bebidas, "Charolazo con camarones", 21.99))
+        bebidas.add(item(R.drawable.bebidas, "La mamalona", 12.99))
+        bebidas.add(item(R.drawable.bebidas, "La mamalona con camarones", 14.99))
+        bebidas.add(item(R.drawable.bebidas, "Cubetazo (6 cervezas)", 21.99))
     }
 
     class AdaptadorBebidas : BaseAdapter {

@@ -30,12 +30,12 @@ class AntojitosActivity : AppCompatActivity() {
     }
 
     fun agregaAntojitos() {
-        antojitos.add(item(R.drawable.imgtacos, "Quesadillas", 4.75))
-        antojitos.add(item(R.drawable.imgtacos, "Huaraches", 9.87))
-        antojitos.add(item(R.drawable.imgtacos, "Gringas", 6.47))
-        antojitos.add(item(R.drawable.imgtacos, "Sincronizadas", 6.98))
-        antojitos.add(item(R.drawable.imgtacos, "Sopes", 3.39))
-        antojitos.add(item(R.drawable.imgtacos, "Tostadas", 3.55))
+        antojitos.add(item(R.drawable.quesadillas, "Quesadillas", 4.75))
+        antojitos.add(item(R.drawable.antojitos, "Huaraches", 9.87))
+        antojitos.add(item(R.drawable.antojitos, "Gringas", 6.47))
+        antojitos.add(item(R.drawable.antojitos, "Sincronizadas", 6.98))
+        antojitos.add(item(R.drawable.antojitos, "Sopes", 3.39))
+        antojitos.add(item(R.drawable.antojitos, "Tostadas", 3.55))
     }
 
     class AdaptadorAntojitos : BaseAdapter {

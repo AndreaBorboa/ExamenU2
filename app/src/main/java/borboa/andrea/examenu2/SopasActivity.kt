@@ -30,12 +30,12 @@ class SopasActivity : AppCompatActivity() {
     }
 
     fun agregaSopas() {
-        sopas.add(item(R.drawable.imgtacos, "Pozole", 5.99))
-        sopas.add(item(R.drawable.imgtacos, "Menudo", 5.99))
-        sopas.add(item(R.drawable.imgtacos, "Caldo de Res", 5.99))
-        sopas.add(item(R.drawable.imgtacos, "Caldo de Camaron", 10.69))
-        sopas.add(item(R.drawable.imgtacos, "Sopa de Mariscos", 15.75))
-        sopas.add(item(R.drawable.imgtacos, "Coctel de Camaron", 13.50))
+        sopas.add(item(R.drawable.pozole, "Pozole", 5.99))
+        sopas.add(item(R.drawable.menudo, "Menudo", 5.99))
+        sopas.add(item(R.drawable.caldores, "Caldo de Res", 5.99))
+        sopas.add(item(R.drawable.caldocamaron, "Caldo de Camaron", 10.69))
+        sopas.add(item(R.drawable.caldomarisco, "Sopa de Mariscos", 15.75))
+        sopas.add(item(R.drawable.coctelcamaron, "Coctel de Camaron", 13.50))
     }
 
     class AdaptadorSopas : BaseAdapter {

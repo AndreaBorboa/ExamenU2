@@ -30,11 +30,11 @@ class SideOrdersActivity : AppCompatActivity() {
     }
 
     fun agregaSideOrders() {
-        sideorders.add(item(R.drawable.imgtacos, "Side Of Guacamole", 3.75))
-        sideorders.add(item(R.drawable.imgtacos, "Side Of Rice", 1.99))
-        sideorders.add(item(R.drawable.imgtacos, "Side Of Beans", 1.99))
-        sideorders.add(item(R.drawable.imgtacos, "Chips and Salsa", 2.25))
-        sideorders.add(item(R.drawable.imgtacos, "Flour Tacos", 2.99))
+        sideorders.add(item(R.drawable.sideorders, "Side Of Guacamole", 3.75))
+        sideorders.add(item(R.drawable.sideorders, "Side Of Rice", 1.99))
+        sideorders.add(item(R.drawable.sideorders, "Side Of Beans", 1.99))
+        sideorders.add(item(R.drawable.sideorders, "Chips and Salsa", 2.25))
+        sideorders.add(item(R.drawable.flourtacos, "Flour Tacos", 2.99))
     }
 
     class AdaptadorSideOrders : BaseAdapter {

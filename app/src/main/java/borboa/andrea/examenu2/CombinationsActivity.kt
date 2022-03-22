@@ -29,12 +29,12 @@ class CombinationsActivity : AppCompatActivity() {
     }
 
     fun agregaCombinations() {
-        combinations.add(item(R.drawable.imgtacos, "Tradicional Taco Combo", 6.99))
-        combinations.add(item(R.drawable.imgtacos, "Mexican Burritos", 10.99))
-        combinations.add(item(R.drawable.imgtacos, "Los Portales Burrito", 11.79))
-        combinations.add(item(R.drawable.imgtacos, "Cinco", 7.67))
-        combinations.add(item(R.drawable.imgtacos, "Dos Amigos", 8.25))
-        combinations.add(item(R.drawable.imgtacos, "Burrito Pepe", 6.89))
+        combinations.add(item(R.drawable.combinations, "Tradicional Taco Combo", 6.99))
+        combinations.add(item(R.drawable.combinations, "Mexican Burritos", 10.99))
+        combinations.add(item(R.drawable.combinations, "Los Portales Burrito", 11.79))
+        combinations.add(item(R.drawable.combinations, "Cinco", 7.67))
+        combinations.add(item(R.drawable.combinations, "Dos Amigos", 8.25))
+        combinations.add(item(R.drawable.combinations, "Burrito Pepe", 6.89))
     }
 
     class AdaptadorCombinations : BaseAdapter {
