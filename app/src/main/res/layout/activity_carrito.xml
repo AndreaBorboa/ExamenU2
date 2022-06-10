@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CarritoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@color/orangeblack"
+        android:gravity="center"
+        android:padding="15dp">
+
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="YOUR CART"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/orangeblack"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/carrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_carro"
+                android:textAlignment="textEnd"
+                android:background="@color/orangeblack"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/btn_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Continue to shop"
+            android:padding="5dp"
+            android:background="@color/fondo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/liview_carrito"
+            android:layout_width="match_parent"
+            android:layout_height="391dp"
+            android:layout_marginTop="5dp"
+
+            />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="TOTAL"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:layout_marginBottom="20dp"
+               android:textSize="20dp"
+               android:textColor="@color/verde"
+               android:textStyle="bold"
+               android:fontFamily="sans-serif-condensed"
+               />
+           <TextView
+               android:id="@+id/tv_total"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="$35"
+               android:textAlignment="textEnd"
+               android:layout_marginRight="20dp"
+               android:layout_marginBottom="20dp"
+               android:textSize="20dp"
+               android:textStyle="bold"
+               android:textColor="@color/verde"
+               android:fontFamily="sans-serif-condensed"
+               />
+
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_añadir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="BUY"
+                android:textStyle="bold"
+                style="?attr/materialButtonOutlinedStyle"
+                app:cornerRadius="10dp"
+                app:strokeColor="@color/orangeblack"
+                android:textColor="@color/orangeblack" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
