@@ -13,5 +13,7 @@
     <color name="verdeclaro">#DAF7A6</color>
     <color name="naranjita">#F28705</color>
     <color name="rojito">#8C2A2A</color>
+    <color name="fondo">#FFDAD4</color>
+    <color name="fondo1">#FCEEBA</color>
 
 </resources>

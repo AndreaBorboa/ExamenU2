@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val boton_menu: Button = findViewById(R.id.btn_menu)
 
         boton_menu.setOnClickListener{
-            var intent: Intent = Intent(this, PlatillosActivity::class.java)
+            var intent: Intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

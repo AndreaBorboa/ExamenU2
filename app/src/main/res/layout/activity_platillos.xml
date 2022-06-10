@@ -1,31 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/fondomadera1"
-    tools:context=".AntojitosActivity">
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="158dp"
-        app:srcCompat="@drawable/cabecera"/>
+    tools:context=".PlatillosActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:orientation="vertical">
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@color/orangeblack"
+        android:gravity="center"
+        android:padding="15dp">
 
 
-        <ListView
-            android:id="@+id/liview"
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="TACOS"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="549dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/orangeblack"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/carrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_carro"
+                android:gravity="end"
+                android:background="@color/orangeblack"/>
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/liview_platillos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
 
 </LinearLayout>

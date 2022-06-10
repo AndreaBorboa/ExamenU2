@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/platillo_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quesadillas"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/orangeblack"
+                android:fontFamily="sans-serif-condensed"
+                />
+
+            <TextView
+                android:id="@+id/platillo_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rellenas con su carne favorita, servidas con ensalada. Filled with your choice of meat, served with salad."
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView android:id="@+id/platillo_precio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="9dp"
+                    android:text="$4.75"
+                    android:textStyle="bold"
+                    android:textColor="@color/orangeblack"
+                    android:textSize="15dp"
+                    android:background="@color/fondo"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_menos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="-"
+                        app:cornerRadius="10dp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/platillo_cantidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/orangeblack"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/btn_mas"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="+"
+                        android:layout_marginRight="20dp"
+                        app:cornerRadius="10dp"
+                        android:textColor="@color/white"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:id="@+id/btn_añadir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Add to cart"
+                    android:textStyle="bold"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="@color/orangeblack"
+                    android:textColor="@color/orangeblack" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenU2">
         <activity
+            android:name=".CarritoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlatillosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,18 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlatillosActivity"></activity>
-        <activity android:name=".AntojitosActivity"></activity>
-        <activity android:name=".CaldosActivity"></activity>
-        <activity android:name=".CombinationsActivity"></activity>
-        <activity android:name=".EspecialidadesActivity"></activity>
-        <activity android:name=".SideOrdersActivity"></activity>
-        <activity android:name=".SopasActivity"></activity>
-        <activity android:name=".TacosActivity"></activity>
-        <activity android:name=".TortasActivity"></activity>
-        <activity android:name=".BebidasActivity"></activity>
-        <activity android:name=".detalle_platillos"></activity>
-
     </application>
 
 </manifest>

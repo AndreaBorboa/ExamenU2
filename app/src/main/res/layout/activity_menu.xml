@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MenuActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="M E N U"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@color/orangeblack"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:id="@+id/btn_tacos"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/tacos" />
+            <ImageView
+                android:id="@+id/btn_antojitos"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/antojitos" />
+            <ImageView
+                android:id="@+id/btn_especialidades"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/especialidades" />
+            <ImageView
+                android:id="@+id/btn_caldos"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/caldos" />
+            <ImageView
+                android:id="@+id/btn_combinations"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/combinations" />
+            <ImageView
+                android:id="@+id/btn_tortas"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/tortas" />
+            <ImageView
+                android:id="@+id/btn_sopas"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/sopas" />
+            <ImageView
+                android:id="@+id/btn_sideorders"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/sideorders" />
+            <ImageView
+                android:id="@+id/btn_drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="137dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/drinks" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

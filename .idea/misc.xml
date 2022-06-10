@@ -4,22 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Aplicaciones Moviles/ExamenU2/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_detalle.xml" value="0.22" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/drawable/ic_carrito.xml" value="0.15" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/drawable/ic_carro.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/drawable/ic_delete.xml" value="0.1795" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_carrito.xml" value="0.22" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_detalle.xml" value="0.18" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_detalleplatillo.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_drinks.xml" value="0.22" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_menu.xml" value="0.2" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_pedido.xml" value="0.25" />
-        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_platillos.xml" value="0.22" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/activity_platillos.xml" value="0.18" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item.xml" value="0.16" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_carrito.xml" value="0.25" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_comida.xml" value="0.12454710144927536" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_detalle.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_drinks.xml" value="0.22" />
-        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_platillos.xml" value="0.22" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_platillo.xml" value="0.25" />
+        <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_platillos.xml" value="0.25" />
         <entry key="..\:/Users/andre/OneDrive/Documentos/GitHub/ExamenU2/app/src/main/res/layout/item_seleccion.xml" value="0.21" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_drinks.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
