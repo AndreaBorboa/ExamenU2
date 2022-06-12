@@ -51,16 +51,17 @@
         android:orientation="vertical"
         android:layout_marginBottom="15dp">
 
-        <TextView
+        <Button
             android:id="@+id/btn_continuar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Continue to shop"
+            android:textAllCaps="false"
             android:padding="5dp"
-            android:background="@color/fondo"
+            android:backgroundTint="@color/fondo"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed"
             />
@@ -70,7 +71,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/liview_carrito"
             android:layout_width="match_parent"
-            android:layout_height="391dp"
+            android:layout_height="395dp"
             android:layout_marginTop="5dp"
 
             />
@@ -115,7 +116,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_añadir"
+                android:id="@+id/btn_comprar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

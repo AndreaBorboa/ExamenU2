@@ -23,18 +23,21 @@ class PlatillosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_platillos)
-        //var adaptador:AdaptadorProductos
+
+        var lista = intent.getSerializableExtra("listaCarrito") as ArrayList<item>
+
 
         var menuOption: String? = intent.getStringExtra("menuType")
 
         if (menuOption != null) {
-            agregaPlatillo(menuOption)
+            agregaPlatillo(menuOption,lista)
         }
+
 
     }
 
 
-    fun agregaPlatillo(option:String){
+    fun agregaPlatillo(option:String,lista:ArrayList<item>){
         var adaptador:AdaptadorProductos
         var tituloPlatillo = findViewById<TextView>(R.id.titulo) as TextView
         var listview: RecyclerView = findViewById(R.id.liview_platillos) as RecyclerView
@@ -56,7 +59,7 @@ class PlatillosActivity : AppCompatActivity() {
                 tacos.add(item("Cueritos/Pork Skin", "Traditional Taco", 2.35,0,2.35))
                 tacos.add(item("Lengua", "Traditional Taco", 3.99,0,3.99))
                 tacos.add(item("Taco de Pescado", "Traditional Taco", 2.35,0,2.35))
-                adaptador = AdaptadorProductos(tacos)
+                adaptador = AdaptadorProductos(tacos,lista)
                 tituloPlatillo.setText("TACOS")
                 listview.adapter = adaptador
             }
@@ -67,7 +70,7 @@ class PlatillosActivity : AppCompatActivity() {
                 antojitos.add(item("Sincronizadas","Tortilla de harina rellena con queso y jamon. Se sirve con lechuga, crema y guacamole Sandwich of Two four tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 6.98,0,6.98))
                 antojitos.add(item("Sopes","Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 3.39,0,3.39))
                 antojitos.add(item("Tostadas","Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 3.55,0,3.55))
-                adaptador = AdaptadorProductos(antojitos)
+                adaptador = AdaptadorProductos(antojitos,lista)
                 tituloPlatillo.setText("ANTOJITOS")
                 listview.adapter = adaptador
             }
@@ -78,14 +81,14 @@ class PlatillosActivity : AppCompatActivity() {
                 especialidades.add(item( "Fajita Quesadilla","Quesadilla extra grande, rellena con tu carne favorita, cebolla asada, chile banana y jitomate. Servida con arroz, frijoles y ensalada Extra large quesadilla with your choice of meat, cooked with grilled onions, banana peppers and tomatoes. Served with rice beans and salad.", 12.49,0,12.49))
                 especialidades.add(item("Botana de Camarones","Botana", 17.99,0,17.99))
                 especialidades.add(item("Coctel de Camaron","Coctel", 14.50,0,14.50))
-                adaptador = AdaptadorProductos(especialidades)
+                adaptador = AdaptadorProductos(especialidades,lista)
                 tituloPlatillo.setText("ESPECIALIDADES")
                 listview.adapter = adaptador
             }
             "caldos"->{
                 caldos.add(item("Langer","Caldo", 10.99,0,10.99))
                 caldos.add(item("Camaron","Caldo", 11.99,0,11.99))
-                adaptador = AdaptadorProductos(caldos)
+                adaptador = AdaptadorProductos(caldos,lista)
                 tituloPlatillo.setText("CALDOS")
                 listview.adapter = adaptador
             }
@@ -97,7 +100,7 @@ class PlatillosActivity : AppCompatActivity() {
                 combinations.add(item("Dos Amigos", "Two hard shell tacos with your choice of meat topped with lettuce and shredded cheese. served with a side of rice and beans.",8.25,0,8.25))
                 combinations.add(item("Burrito Pepe","\n" +
                         "A flour tortilla wrapped around your choice of meat with beans, lettuce, sour cream, guacamole and pico de gallo. served with a side of rice.", 6.89,0,6.89))
-                adaptador = AdaptadorProductos(combinations)
+                adaptador = AdaptadorProductos(combinations,lista)
                 tituloPlatillo.setText("COMBINATIONS")
                 listview.adapter = adaptador
             }
@@ -107,7 +110,7 @@ class PlatillosActivity : AppCompatActivity() {
                 tortas.add(item("Torta Cubana","Chorizo, asada, jamon, pastor y queso Mexican sausage, steak, marinated pork, ham, and cheese.", 12.35,0,12.35))
                 tortas.add(item("Torta Mixta","Chorizo, asada y pastor Mexican sausage, steak and marinated pork.", 11.99,0,11.99))
                 tortas.add(item("Small Mexican Torta", "Bolillo bread sandwich with your choice of filling. Topped with Lettuce, tomatoes, onions, and avocado.",6.89,0,6.89))
-                adaptador = AdaptadorProductos(tortas)
+                adaptador = AdaptadorProductos(tortas,lista)
                 tituloPlatillo.setText("TORTAS")
                 listview.adapter = adaptador
             }
@@ -118,7 +121,7 @@ class PlatillosActivity : AppCompatActivity() {
                 sopas.add(item("Caldo de Camaron", "Shrimp soup",10.69,0,10.69))
                 sopas.add(item("Sopa de Mariscos","Seafood soup", 15.75,0,15.75))
                 sopas.add(item("Coctel de Camaron","Shrimp cocktail", 13.50,0,13.50))
-                adaptador = AdaptadorProductos(sopas)
+                adaptador = AdaptadorProductos(sopas,lista)
                 tituloPlatillo.setText("SOPAS")
                 listview.adapter = adaptador
             }
@@ -128,7 +131,7 @@ class PlatillosActivity : AppCompatActivity() {
                 sideorders.add(item("Side Of Beans","...", 1.99,0,1.99))
                 sideorders.add(item("Chips and Salsa", "...",2.25,0,2.25))
                 sideorders.add(item("Flour Tacos","...", 2.99,0,2.99))
-                adaptador = AdaptadorProductos(sideorders)
+                adaptador = AdaptadorProductos(sideorders,lista)
                 tituloPlatillo.setText("SIDE ORDERS")
                 listview.adapter = adaptador
             }
@@ -148,7 +151,7 @@ class PlatillosActivity : AppCompatActivity() {
                 drinks.add(item("La mamalona","drink", 12.99,0,12.99))
                 drinks.add(item("La mamalona con camarones","drink", 14.99,0,14.99))
                 drinks.add(item("Cubetazo (6 cervezas)","drink", 21.99,0,21.99))
-                adaptador = AdaptadorProductos(drinks)
+                adaptador = AdaptadorProductos(drinks,lista)
                 tituloPlatillo.setText("DRINKS")
                 listview.adapter = adaptador
             }

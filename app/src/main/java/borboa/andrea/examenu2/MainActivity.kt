@@ -11,8 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val boton_menu: Button = findViewById(R.id.btn_menu)
 
+        val listaCarrito = ArrayList<item>()
+
         boton_menu.setOnClickListener{
             var intent: Intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("listaCarrito",listaCarrito)
             startActivity(intent)
         }
 

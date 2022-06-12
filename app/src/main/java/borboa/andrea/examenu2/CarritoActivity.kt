@@ -1,8 +1,11 @@
 package borboa.andrea.examenu2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,44 +17,47 @@ class CarritoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_carrito)
 
-        val listaCarrito = ArrayList<item>()
-
-         var nombre_platillo:String
-         var precio_platillo:Double
-         var cantidad_platillo:Int
-         var descripcion_platillo:String
-         var total_platillo:Double
-
-        val bundle = intent.extras
-        nombre_platillo = bundle?.getString("nombre").toString()
-        precio_platillo = bundle?.getDouble("precio").toString().toDouble()
-        cantidad_platillo = bundle?.getInt("cantidad").toString().toInt()
-        descripcion_platillo = bundle?.getString("descripcion").toString()
-        total_platillo = bundle?.getDouble("total").toString().toDouble()
+        val lista = ArrayList<item>()
 
 
-        listaCarrito.add(item(nombre_platillo,descripcion_platillo,precio_platillo,cantidad_platillo,total_platillo))
-        var totalPrecios = listaCarrito.map {
-            it.precio_item.toString().toDouble()
+        lista.addAll(intent.getSerializableExtra("listaCarrito") as ArrayList<item>)
+
+
+        var total = lista.map {
+            it.total.toString().toDouble()
         }?.sum().toString().toDouble()
-
-        var totalCantidad = listaCarrito.map{
-            it.cantidad.toString().toInt()
-        }?.sum().toString().toInt()
-
-
-        val total = totalCantidad*totalPrecios
 
         var adaptador:AdaptadorCarrito
         var listview: RecyclerView = findViewById(R.id.liview_carrito) as RecyclerView
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         listview.setLayoutManager(layoutManager)
 
-        adaptador = AdaptadorCarrito(listaCarrito)
+        adaptador = AdaptadorCarrito(lista)
         listview.adapter = adaptador
 
 
         var totalView: TextView = findViewById(R.id.tv_total) as TextView
-        totalView.setText("${total}")
+        totalView.setText("$${"%.2f".format(total)}")
+        var btn_continuar: Button = findViewById(R.id.btn_continuar) as Button
+        var btn_comprar: Button = findViewById(R.id.btn_comprar) as Button
+
+
+        btn_continuar.setOnClickListener{
+            var intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("listaCarrito",lista)
+            this!!.startActivity(intent)
+        }
+
+        btn_comprar.setOnClickListener{
+            Toast.makeText(applicationContext,"Gracias por tu compra !",
+                Toast.LENGTH_SHORT).show()
+            lista.clear()
+            var intent = Intent(this, CarritoActivity::class.java)
+            intent.putExtra("listaCarrito",lista)
+            this!!.startActivity(intent)
+        }
+
+
     }
 }
+
