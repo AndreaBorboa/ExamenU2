@@ -10,12 +10,15 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+        var lista = ArrayList<item>()
+        lista= intent.getSerializableExtra("listaCarrito") as ArrayList<item>
 
         var btnTacos: ImageView = findViewById(R.id.btn_tacos) as ImageView
 
         btnTacos.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","tacos")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -24,6 +27,7 @@ class MenuActivity : AppCompatActivity() {
         btnAntojitos.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","antojitos")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -32,6 +36,7 @@ class MenuActivity : AppCompatActivity() {
         btnEspecialidades.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","especialidades")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -40,6 +45,7 @@ class MenuActivity : AppCompatActivity() {
         btnCaldos.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","caldos")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -48,6 +54,7 @@ class MenuActivity : AppCompatActivity() {
         btnCombinatios.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","combinations")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -56,6 +63,7 @@ class MenuActivity : AppCompatActivity() {
         btnTortas.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","tortas")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -64,6 +72,7 @@ class MenuActivity : AppCompatActivity() {
         btnSopas.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","sopas")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -72,6 +81,7 @@ class MenuActivity : AppCompatActivity() {
         btnSideOrders.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","sideorders")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 
@@ -80,6 +90,7 @@ class MenuActivity : AppCompatActivity() {
         btnDrinks.setOnClickListener{
             var intent: Intent = Intent(this, PlatillosActivity::class.java)
             intent.putExtra("menuType","drinks")
+            intent.putExtra("listaCarrito",lista)
             startActivity(intent)
         }
 

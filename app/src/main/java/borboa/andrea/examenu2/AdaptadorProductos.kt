@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class AdaptadorProductos internal constructor(private val productosList: List<item>) :
+class AdaptadorProductos internal constructor(private val productosList: List<item>, private val lista:ArrayList<item>) :
     RecyclerView.Adapter<AdaptadorProductos.ProductosViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductosViewHolder {
@@ -29,24 +29,23 @@ class AdaptadorProductos internal constructor(private val productosList: List<it
 
         holder.btn_mas.setOnClickListener {
             cantidad= cantidad + 1
+            productosList[position].total= productosList[position].precio_item * cantidad
             holder.cantidad.setText("${cantidad}")
         }
 
         holder.btn_menos.setOnClickListener {
             cantidad = cantidad - 1
+            productosList[position].total= productosList[position].precio_item * cantidad
             holder.cantidad.setText("${cantidad}")
         }
 
         holder.btn_añadir.setOnClickListener {
             var intent = Intent(v.context, CarritoActivity::class.java)
-            val bundle = Bundle()
 
-            bundle.putString("nombre",productosList[position].nombre_item)
-            bundle.putString("descripcion",productosList[position].descripcion_item)
-            bundle.putDouble("precio",productosList[position].precio_item)
-            bundle.putInt("cantidad",cantidad)
-            bundle.putDouble("total",productosList[position].total)
-            intent.putExtras(bundle);
+            lista.add(item(productosList[position].nombre_item,productosList[position].descripcion_item,productosList[position].precio_item,cantidad,productosList[position].total))
+
+            intent.putExtra("listaCarrito",lista)
+
             v.context!!.startActivity(intent)
         }
 
