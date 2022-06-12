@@ -4,14 +4,31 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
+import com.nex3z.notificationbadge.NotificationBadge
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        var lista = ArrayList<item>()
-        lista= intent.getSerializableExtra("listaCarrito") as ArrayList<item>
+        var lista = intent.getSerializableExtra("listaCarrito") as ArrayList<item>
+        var list = ArrayList<item>()
+        list.addAll(lista)
+
+
+        var btn_atras: ImageButton = findViewById(R.id.btn_menu) as ImageButton
+        btn_atras.setOnClickListener{
+            var intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        var btn_carrito: ImageButton = findViewById(R.id.carrito) as ImageButton
+        btn_carrito.setOnClickListener {
+            var intent: Intent = Intent(this, CarritoActivity::class.java)
+            intent.putExtra("listaCarrito",lista)
+            startActivity(intent)
+        }
 
         var btnTacos: ImageView = findViewById(R.id.btn_tacos) as ImageView
 

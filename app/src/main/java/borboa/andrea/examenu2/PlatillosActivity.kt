@@ -1,10 +1,13 @@
 package borboa.andrea.examenu2
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nex3z.notificationbadge.NotificationBadge
 
 
 class PlatillosActivity : AppCompatActivity() {
@@ -24,7 +27,12 @@ class PlatillosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_platillos)
 
+        var list = ArrayList<item>()
+
         var lista = intent.getSerializableExtra("listaCarrito") as ArrayList<item>
+
+        list.addAll(lista)
+
 
 
         var menuOption: String? = intent.getStringExtra("menuType")
@@ -32,6 +40,26 @@ class PlatillosActivity : AppCompatActivity() {
         if (menuOption != null) {
             agregaPlatillo(menuOption,lista)
         }
+
+
+
+        var btn_atras: ImageButton = findViewById(R.id.btn_menu) as ImageButton
+        btn_atras.setOnClickListener{
+            var intent: Intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("listaCarrito",lista)
+            startActivity(intent)
+        }
+
+        var btn_carrito: ImageButton = findViewById(R.id.carrito) as ImageButton
+        btn_carrito.setOnClickListener {
+            var intent: Intent = Intent(this, CarritoActivity::class.java)
+            intent.putExtra("listaCarrito",lista)
+            startActivity(intent)
+        }
+
+
+
+
 
 
     }
